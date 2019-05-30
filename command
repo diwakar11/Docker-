@@ -27,5 +27,12 @@ WARNING! This will remove:
         - all images without at least one container associated to them
         - all build cache
         
+----------------------------------------------------------------------------------------
+
+docker ps — Lists running containers. Some useful flags include: -a / -all for all containers (default shows just running) 
+and —-quiet /-q to list just their ids (useful for when you want to get all the containers).
+
+-----------------------------------------------------------------------------------------
+        
 
 

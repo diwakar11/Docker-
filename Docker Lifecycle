@@ -1,4 +1,72 @@
 https://medium.com/@nagarwal/lifecycle-of-docker-container-d2da9f85959  -- Link
 
+----
+Create a container to run it later on with required image.
+
+docker create --name <container-name> <image-name>
+
+-----
+Run the docker container with the required image and specified command / process. ‘-d’ flag is used for running the container in background.
+
+docker run -it -d --name <container-name> <image-name> bash
+
+------
+Pause container
+Used to pause the processes running inside the container.
+
+docker pause <container-id/name>
+-------
+
+Unpause container
+Used to unpause the processes inside the container.
+
+docker unpause <container-id/name>
+--------
+Start container
+Start the container, if present in stopped state.
+
+docker start <container-id/name>
+---------
+
+Stop container
+To stop the container and processes running inside the container:
+
+docker stop <container-id/name>
+
+----------
+
+To stop all the running docker containers
+
+docker stop $(docker ps -a -q)
+
+---------
+Restart container
+It is used to restart the container as well as processes running inside the container.
+
+docker restart <container-id/name>
+
+---------
+Kill container
+We can kill the running container.
+
+docker kill <container-id/name>
+
+---------
+
+Destroy container
+Its preferred to destroy container, only if present in stopped state instead of forcefully destroying the running container.
+
+docker rm <container-id/name>
+
+--------
+To remove all the stopped docker containers
+
+docker rm $(docker ps -q -f status=exited)
+
+-----
+
+Source: ~ Docker CLI
+
+
 
 
